@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>정혜진의 작업실</title>
+    <link rel="stylesheet" href="css/작업실.css"/>
+</head>
+<style>
+    body{background-image: url('img/배경.png');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;}
+    img{
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 300px;
+     margin-bottom: 100px;
+     display: block;}
+    
+
+</style>
+
+<body>
+<div class="cover" id="cover">
+    <div class="cover__wrap">
+      <img src="img/정혜진 작업실.png" usemap="#image-map">
+      <map name="image-map">
+        <area target="" alt="재료_파스텔" title="재료_파스텔" href="javascript:popup();" coords="686,455,674,461,674,481,655,645,666,647,680,621,745,637,754,679,790,680,795,641,828,625,827,642,805,484,799,470,715,451,701,452" shape="poly">
+        <area target="" alt="숨겨진 작업" title="숨겨진 작업" href="javascript:popup1();" coords="315,455,330,545,356,557,390,547,392,532,377,529,360,446,340,448" shape="poly">
+        <area target="" alt="드로잉" title="드로잉" href="html/스케치.html" coords="812,350,849,326,885,317,898,315,920,300,945,276,1007,316,1007,449,983,461,975,606,931,617,876,601,871,579,850,435,839,421,814,362" shape="poly">
+        <area target="" alt="재료 1" title="재료 1" href="javascript:popup2()" coords="303,357,303,407,132,426,107,424,5,399,4,362,16,309,13,284,116,262,202,271,274,284,339,324,313,331" shape="poly">
+        <area target="" alt="재료 2" title="재료 2" href="javascript:popup3()" coords="15,619,147,673,304,614,306,556,284,495,251,458,213,470,152,493,137,484,62,488,26,489,-1,535,0,596" shape="poly">
+        <area target="" alt="정혜진" title="정혜진" href="artistnotes/artistnote1.html" coords="60,-1,58,57,152,81,151,24" shape="poly">
+        <area target="" alt="다른 드로잉" title="다른 드로잉" href="javascript:popup5()" coords="843,327,809,347,822,377,706,372,707,365,546,365,538,350,526,333,602,308" shape="poly">
+      </map>
+    </div>
+  </div>
+  <svg id="svg-mask">
+    <defs>
+      <filter id="svg-mask--blur" x="0" y="0">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+      </filter>
+      <mask id="svg-mask--mask">
+        <rect class="svg-mask--rect" fill="white" />
+        <circle class="svg-mask--circle" cx="100" cy="100" r="30" fill="black" filter="url(#svg-mask--blur)"/>
+      </mask>
+    </defs>
+    <rect class="svg-mask--rect" mask="url(#svg-mask--mask)"/>
+  </svg>
+  <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js'></script><script  src="./script.js"></script>
+  
+<!-- Copyright (c) 2020 by Fabio Ottaviani (https://codepen.io/supah/pen/yLeExKP)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-->
+
+
+
+<div class="window">
+<script type="text/javascript">
+
+    function popup(){
+    window.open('재료 파스텔 팝업.html','팝업창0','width=300, height=600, left=900, top=400'); 
+    }
+    
+    function popup1(){
+    window.open('html/숨겨진 작업.html','팝업창1','width=347px, height=520px, left=900, top=500');
+    }
+    function popup2(){
+    window.open('재료 1.html','팝업창2','width=900, height=900, left=500, top=200');
+    }
+
+    function popup3(){
+    window.open('html/재료 2.html','팝업창3','width=520px, height=347px left=499px top=600px');
+    }
+    function popup4(){
+    window.open('artistnotes/artistnote1.html','팝업창4','width=1560px, height=1040px left=0px top=0px');
+    }
+    function popup5(){
+    window.open('html/자화상 시리즈- 감정 1.html','팝업창5','width=1600, height=2071, left=300, top=150');
+    window.open('html/자화상 시리즈- 감정 2.html','팝업창5-2','width=2676, height=4296, left=1000, top=600');
+    window.open('html/자화상 시리즈- 감정 3.html','팝업창5-3','width=1000, height=789, left=3000, top=1500');
+    }
+    </script>
+</div>
+</body>
+</html>

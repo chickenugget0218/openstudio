@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스케치</title>
+
+    <script type="text/javascript">
+        var imgArray= new Array();
+        imgArray[0]="드로잉/chip1.jpg";  //사진
+        imgArray[1]="드로잉/chip2.jpg"; //사진
+        imgArray[2]="드로잉/chip3.jpg";    //사진
+        imgArray[3]="드로잉/chip4.jpg";  
+        imgArray[4]="드로잉/chip5.jpg";
+        imgArray[5]="드로잉/chip6.jpg";
+          //사진
+ 
+        
+        function showImage()
+        {
+            var imgNum=Math.round(Math.random()*6);
+            var objImg=document.getElementById("introImg");
+            objImg.src=imgArray[imgNum];
+        }
+    </script>
+
+</head>
+<body onload="showImage()">
+    <img id="introImg" border="0">
+</body>
+<body>
+
+    
+<script type='text/javascript'>
+var img_L = 0;
+var img_T = 0;
+var targetObj;
+
+function getLeft(o){
+     return parseInt(o.style.left.replace('px', ''));
+}
+function getTop(o){
+     return parseInt(o.style.top.replace('px', ''));
+}
+
+// 이미지 움직이기
+function moveDrag(e){
+     var e_obj = window.event? window.event : e;
+     var dmvx = parseInt(e_obj.clientX + img_L);
+     var dmvy = parseInt(e_obj.clientY + img_T);
+     targetObj.style.left = dmvx +"px";
+     targetObj.style.top = dmvy +"px";
+     return false;
+}
+
+// 드래그 시작
+function startDrag(e, obj){
+     targetObj = obj;
+     var e_obj = window.event? window.event : e;
+     img_L = getLeft(obj) - e_obj.clientX;
+     img_T = getTop(obj) - e_obj.clientY;
+
+     document.onmousemove = moveDrag;
+     document.onmouseup = stopDrag;
+     if(e_obj.preventDefault)e_obj.preventDefault();
+}
+
+// 드래그 멈추기
+function stopDrag(){
+     document.onmousemove = null;
+     document.onmouseup = null;
+}
+</script>
+</body>
+<div style='position:absolute; left:0px; top:0px; cursor:pointer; cursor:hand' onmousedown='startDrag(event, this)'>
+    <a href="작업실.html"><table bgcolor="#0000FF"><tr><td>
+        <font color="#FFFFFF">드로잉을 드래그해서 자유롭게 배열해보세요!   다시 돌아가려면 이 문장을 클릭</font>
+    </td></tr></table></a>
+</div>
+<img src="드로잉/드로잉3.png" width="500" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand" onmousedown="startDrag(event, this)" border="0">
+<img src="드로잉/드로잉7.png" width="500" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand" onmousedown="startDrag(event, this)" border="0">
+<img src="드로잉/드로잉1.png" width="500" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand" onmousedown="startDrag(event, this)" border="0">
+<img src="드로잉/정혜진.png" width="150" style="position:absolute; left:0px; top:50px; cursor:pointer; cursor:hand" onmousedown="startDrag(event, this)" border="0">
+</html>
+
+
+</body>
+</html>
+
